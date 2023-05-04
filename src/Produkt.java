@@ -9,7 +9,7 @@ public class Produkt {
     private Category category;
     private double price;
 
-    private ArrayList priceHistory = new ArrayList<>();
+    private ArrayList priceHistory = new ArrayList<>();  //history price array
 
     public Produkt(String name, Category category, double price) {
         this.name = name;
@@ -26,22 +26,22 @@ public class Produkt {
                 '}';
     }
 
-    public String getName() {
+    public String getName() {  // metod getName
         return name;
     }
 
-    public double getPrice() {
+    public double getPrice() {  //metod getPrice
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(double price) {  //metod setPrice
         if (price > 0) {
-            priceHistory.add(this.price);
+            priceHistory.add(this.price);  //add to history
             this.price = price;
 
         }
     }
-    public ArrayList getPriceHistory(){
+    public ArrayList getPriceHistory(){  //metod getPriceHistory
         return priceHistory;
     }
 }
